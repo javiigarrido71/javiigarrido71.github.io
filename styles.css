@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1e9e9;
+}
+
+header {
+    padding: 20px;
+    background-color: #d16d6d;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+}
+
+main {
+    padding-top: 45px;
+}
+
+.imagen {
+    margin: 10px;
+    max-width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+#marco {
+    width: 300px;
+    height: 400px;
+    top: 5px;
+    perspective: 1000px; /* Profundidad de la perspectiva para el efecto 3D */
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    position: relative;
+    border: 10px solid #d16d6d;
+    border-radius: 15px;
+}
+
+#letra {
+    position: relative;
+    font-size: 24px;
+    color: #0a0a0a;
+    margin-bottom: 30px;
+}
+
+#texto-mes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #0a0a0a;
+    text-align: center;
+    display: block;
+}
+
+.imagen-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none; /* Inicialmente oculta la imagen de fondo */
+    transform: rotateY(180deg);
+}
+
+.foto.girada .imagen-back {
+    background-image: url('');
+}
+
+.btn {
+    top: 50%;
+    font-size: 20px;
+    background-color: #d16d6d;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.button-row {
+    width: 60px;
+    margin-top: 150px;
+}
+
+.button-col {
+    height: 60px;
+}
+
+.imagen.rotar {
+    transform: rotateY(180deg);
+}
+
+#musica {
+    margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+    /* Oculta los botones originales en resoluciones pequeñas */
+    .button-row {
+        display: none;
+    }
+    
+    /* Muestra los nuevos botones en resoluciones pequeñas */
+    .d-flex.d-md-none {
+        display: flex;
+        margin-top: 40px;
+    }
+}
